@@ -71,6 +71,13 @@
             </dependency>
 
             <dependency>
+                <groupId>com.kumuluz.ee.config</groupId>
+                <artifactId>kumuluzee-config-consul</artifactId>
+                <version>${kumuluzee-config.version}</version>
+            </dependency>
+
+
+            <dependency>
                 <groupId>si.fri.rso.samples</groupId>
                 <artifactId>image-catalog-api</artifactId>
                 <version>${project.version}</version>
