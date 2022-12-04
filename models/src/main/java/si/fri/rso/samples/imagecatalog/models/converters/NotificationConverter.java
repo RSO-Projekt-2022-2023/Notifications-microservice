@@ -8,6 +8,7 @@ public class NotificationConverter {
     public static Notification toDto(NotificationEntity entity) {
 
         Notification dto = new Notification();
+        dto.setNotificationId(entity.getId());
         dto.setCreated(entity.getCreated());
         dto.setDescription(entity.getDescription());
         dto.setTitle(entity.getTitle());

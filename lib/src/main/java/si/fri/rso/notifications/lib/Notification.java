@@ -36,4 +36,12 @@ public class Notification {
     }
 
 
+    public Integer getNotificationId() {
+        return notificationId;
+    }
+
+    public void setNotificationId(Integer notificationId) {
+        this.notificationId = notificationId;
+    }
+
 }
