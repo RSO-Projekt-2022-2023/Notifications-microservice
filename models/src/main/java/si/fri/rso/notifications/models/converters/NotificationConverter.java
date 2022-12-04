@@ -1,7 +1,7 @@
-package si.fri.rso.samples.imagecatalog.models.converters;
+package si.fri.rso.notifications.models.converters;
 
 import si.fri.rso.notifications.lib.Notification;
-import si.fri.rso.samples.imagecatalog.models.entities.NotificationEntity;
+import si.fri.rso.notifications.models.entities.NotificationEntity;
 
 public class NotificationConverter {
 

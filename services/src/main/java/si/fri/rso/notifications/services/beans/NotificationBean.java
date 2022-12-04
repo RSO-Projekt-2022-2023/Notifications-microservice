@@ -3,9 +3,8 @@ package si.fri.rso.notifications.services.beans;
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
 import si.fri.rso.notifications.lib.Notification;
-import si.fri.rso.samples.imagecatalog.lib.ImageMetadata;
-import si.fri.rso.samples.imagecatalog.models.converters.NotificationConverter;
-import si.fri.rso.samples.imagecatalog.models.entities.NotificationEntity;
+import si.fri.rso.notifications.models.converters.NotificationConverter;
+import si.fri.rso.notifications.models.entities.NotificationEntity;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;

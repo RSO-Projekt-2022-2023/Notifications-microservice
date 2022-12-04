@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: notifications-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: notifications
+  template:
+    metadata:
+      labels:
+        app: notifications
+    spec:
+      containers:
+        - image: xineeeee/rso:latest
+          name: notifications
+          env:
+            - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
+              value: jdbc:postgresql://babar.db.elephantsql.com/cmklvtuw
+            - name: KUMULUZEE_DATASOURCES0_USERNAME
+              value: cmklvtuw
+            - name: KUMULUZEE_DATASOURCES0_PASSWORD
+              value: nEu3BfbTr4jIQTaegoMsV2XEmBuABWTs
+          ports:
+            - containerPort: 8080
+              name: server
+              protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: notifications
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: server
+  selector:
+    app: notifications

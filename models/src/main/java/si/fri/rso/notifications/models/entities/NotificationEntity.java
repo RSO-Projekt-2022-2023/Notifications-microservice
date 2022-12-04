@@ -1,4 +1,4 @@
-package si.fri.rso.samples.imagecatalog.models.entities;
+package si.fri.rso.notifications.models.entities;
 
 
 import javax.persistence.*;
