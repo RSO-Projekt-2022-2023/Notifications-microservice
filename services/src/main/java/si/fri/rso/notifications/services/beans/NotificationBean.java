@@ -2,6 +2,7 @@ package si.fri.rso.notifications.services.beans;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
+import org.eclipse.microprofile.metrics.annotation.Timed;
 import si.fri.rso.notifications.lib.Notification;
 import si.fri.rso.notifications.models.converters.NotificationConverter;
 import si.fri.rso.notifications.models.entities.NotificationEntity;
@@ -36,6 +37,7 @@ public class NotificationBean {
 
     }
 
+    @Timed
     public List<Notification> getNotificationFilter(UriInfo uriInfo) {
 
         QueryParameters queryParameters = QueryParameters.query(uriInfo.getRequestUri().getQuery()).defaultOffset(0)

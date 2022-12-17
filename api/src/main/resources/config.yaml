@@ -13,6 +13,16 @@ kumuluzee:
       username: dbuser
       password: postgres
       max-pool-size: 20
+  health:
+    checks:
+      data-source-health-check:
+        type: liveness
+        jndi-name: jdbc/ImageMetadataDS
+    metrics:
+      web-instrumentation:
+        - name: notifications-endpoint
+          url-pattern: /v1/notifications/*
 
 rest-properties:
   maintenance-mode: false
+  broke: false
