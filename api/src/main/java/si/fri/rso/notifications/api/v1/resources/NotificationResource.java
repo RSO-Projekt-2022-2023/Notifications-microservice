@@ -13,7 +13,7 @@ import si.fri.rso.notifications.services.beans.NotificationBean;
 import si.fri.rso.samples.imagecatalog.lib.ImageMetadata;
 import si.fri.rso.notifications.lib.Notification;
 import si.fri.rso.samples.imagecatalog.services.beans.ImageMetadataBean;
-
+import com.kumuluz.ee.cors.annotations.CrossOrigin;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -24,8 +24,7 @@ import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
-
-
+@CrossOrigin(supportedMethods = "GET, POST, PUT, HEAD, DELETE, OPTIONS")
 @ApplicationScoped
 @Path("/notifications")
 @Produces(MediaType.APPLICATION_JSON)
