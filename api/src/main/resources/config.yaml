@@ -10,6 +10,8 @@ kumuluzee:
   cors-filter:
     servlet:
       allow-origin: "*"
+      supported-methods: "GET, POST, PUT, HEAD, DELETE, OPTIONS"
+      exposed-headers: "X-Total-Count"
   datasources:
     - jndi-name: jdbc/ImageMetadataDS
       connection-url: jdbc:postgresql://localhost:5432/image-metadata
