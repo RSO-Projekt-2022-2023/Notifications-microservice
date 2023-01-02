@@ -24,7 +24,7 @@ import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
-@CrossOrigin(supportedMethods = "GET, POST, PUT, DELETE")
+@CrossOrigin(supportedMethods = "GET, POST, PUT, HEAD, DELETE, OPTIONS")
 @ApplicationScoped
 @Path("/notifications")
 @Produces(MediaType.APPLICATION_JSON)
