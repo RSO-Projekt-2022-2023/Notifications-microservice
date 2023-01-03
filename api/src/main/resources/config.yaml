@@ -8,11 +8,12 @@ kumuluzee:
     http:
       port: 8080
 
-  cors-filter:
-    annotations:
-      my-resource:
-        allow-origin: "*"
-        allow-subdomains: true
+  kumuluzee:
+    cors-filter:
+      annotations:
+        my-resource:
+          allow-origin: "*"
+          allow-subdomains: true
   datasources:
     - jndi-name: jdbc/ImageMetadataDS
       connection-url: jdbc:postgresql://localhost:5432/image-metadata
