@@ -13,7 +13,7 @@ spec:
         app: notifications
     spec:
       containers:
-        - image: xineeeee/rso:latest
+        - image: xineeeee/rso:2023-01-03-17-29-28
           name: notifications
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
