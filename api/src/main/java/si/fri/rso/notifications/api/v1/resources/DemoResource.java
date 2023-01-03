@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 @Path("/demo")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
-@CrossOrigin(supportedMethods = "GET, POST, PUT, HEAD, DELETE, OPTIONS")
+@CrossOrigin(allowOrigin = "*")
 public class DemoResource {
 
     private Logger log = Logger.getLogger(DemoResource.class.getName());
