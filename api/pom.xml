@@ -16,6 +16,10 @@
             <artifactId>kumuluzee-cors</artifactId>
         </dependency>
         <dependency>
+            <artifactId>kumuluzee-logs-log4j2</artifactId>
+            <groupId>com.kumuluz.ee.logs</groupId>
+        </dependency>
+        <dependency>
             <groupId>com.kumuluz.ee</groupId>
             <artifactId>kumuluzee-core</artifactId>
             <version>4.1.0</version>

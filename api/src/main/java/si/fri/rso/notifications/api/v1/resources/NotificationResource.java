@@ -25,11 +25,14 @@ import java.util.List;
 import java.util.logging.Logger;
 
 
+import com.kumuluz.ee.logs.cdi.Log;
+
 @ApplicationScoped
 @Path("/notifications")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @CrossOrigin(allowOrigin = "*")
+@Log
 public class NotificationResource {
 
     private Logger log = Logger.getLogger(si.fri.rso.notifications.api.v1.resources.NotificationResource.class.getName());
