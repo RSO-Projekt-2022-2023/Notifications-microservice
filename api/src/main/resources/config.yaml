@@ -15,16 +15,16 @@ kumuluzee:
           allow-origin: "*"
           allow-subdomains: true
   datasources:
-    - jndi-name: jdbc/ImageMetadataDS
+    - jndi-name: jdbc/NotificationsDS
       connection-url: jdbc:postgresql://localhost:5432/image-metadata
       username: dbuser
       password: postgres
       max-pool-size: 20
   health:
     checks:
-      data-source-health-check:
-        type: liveness
-        jndi-name: jdbc/ImageMetadataDS
+      http-health-check:
+        connection-url: http://20.82.85.106/
+
     metrics:
       web-instrumentation:
         - name: notifications-endpoint
