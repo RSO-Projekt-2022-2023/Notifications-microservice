@@ -29,7 +29,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: notifications
+                name: aks-notifications
                 port:
                   number: 8080
           - path: /(.*)
