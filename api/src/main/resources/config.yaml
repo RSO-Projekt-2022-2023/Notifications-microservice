@@ -20,15 +20,7 @@ kumuluzee:
       username: dbuser
       password: postgres
       max-pool-size: 20
-  health:
-    checks:
-      http-health-check:
-        connection-url: http://20.82.85.106/
 
-    metrics:
-      web-instrumentation:
-        - name: notifications-endpoint
-          url-pattern: /v1/notifications/*
 
   metrics:
     web-instrumentation:
