@@ -14,6 +14,7 @@ kumuluzee:
         my-resource:
           allow-origin: "*"
           allow-subdomains: true
+          supported-methods: "GET, POST, HEAD, OPTIONS, PUT, DELETE"
   datasources:
     - jndi-name: jdbc/NotificationsDS
       connection-url: jdbc:postgresql://localhost:5432/image-metadata
