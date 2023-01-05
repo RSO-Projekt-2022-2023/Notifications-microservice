@@ -39,7 +39,20 @@ spec:
                 name: polnilnice
                 port:
                   number: 8080
-
+          - path: /iskanje(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: searcher
+                port:
+                  number: 8081
+          - path: /plosca(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: aks-admin
+                port:
+                  number: 8080
           - path: /(.*)
             pathType: Prefix
             backend:
