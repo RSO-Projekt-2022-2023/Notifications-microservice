@@ -32,6 +32,14 @@ spec:
                 name: aks-notifications
                 port:
                   number: 8080
+          - path: /polnilnica(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: polnilnice
+                port:
+                  number: 8080
+
           - path: /(.*)
             pathType: Prefix
             backend:
