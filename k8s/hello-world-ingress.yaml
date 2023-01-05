@@ -25,7 +25,7 @@ spec:
                 name: aks-helloworld-two
                 port:
                   number: 80
-          - path: /notifications(/|$)(.*)
+          - path: /notification(/|$)(.*)
             pathType: Prefix
             backend:
               service:

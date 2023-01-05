@@ -13,7 +13,7 @@ import javax.inject.Inject;
 public class RestProperties {
 
     @ConfigValue(watch = true)
-    private Boolean maintenanceMode;
+    private Boolean maintenanceMode = false;
 
 
     private Boolean broken;
