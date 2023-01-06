@@ -100,7 +100,7 @@ public class NotificationResource {
             notification = NotificationBean.createNotification(notification);
         }
 
-        return Response.status(Response.Status.CONFLICT).entity(notification).build();
+        return Response.status(Response.Status.CREATED).entity(notification).build();
 
     }
 
