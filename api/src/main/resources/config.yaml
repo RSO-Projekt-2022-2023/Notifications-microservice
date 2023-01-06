@@ -7,14 +7,18 @@ kumuluzee:
     base-url: http://localhost:8080
     http:
       port: 8080
+  health:
+    checks:
+      http-health-check:
+        connection-url: http://20.82.85.106/
 
-  kumuluzee:
-    cors-filter:
-      annotations:
-        my-resource:
-          allow-origin: "*"
-          allow-subdomains: true
-          supported-methods: "GET, POST, HEAD, OPTIONS, PUT, DELETE"
+  cors-filter:
+    annotations:
+      my-resource:
+        allow-origin: "*"
+        allow-subdomains: true
+        supported-methods: "GET, POST, HEAD, OPTIONS, PUT, DELETE"
+
   datasources:
     - jndi-name: jdbc/NotificationsDS
       connection-url: jdbc:postgresql://localhost:5432/image-metadata
