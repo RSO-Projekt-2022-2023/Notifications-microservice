@@ -17,7 +17,7 @@ import javax.ws.rs.core.Application;
         license = @License(name = "dev"), description = "API for managing notifications."),
         servers = @Server(url = "http://localhost:8080/"))
 @ApplicationPath("/v1")
-@CrossOrigin
+@CrossOrigin(supportedMethods = "GET, POST, HEAD, OPTIONS, PUT, DELETE")
 public class NotificationApplication extends Application {
 
 }
